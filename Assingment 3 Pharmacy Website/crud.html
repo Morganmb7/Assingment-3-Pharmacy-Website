@@ -1,0 +1,199 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inventory Management | PharmaFlow</title>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body class="inventory-page">
+
+    <header>
+        <nav class="site-nav">
+            <a class="brand" href="index.html">PharmaFlow</a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a class="active" href="crud.html">Inventory</a>
+                <a href="bot.html">AI Assistant</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INVENTORY HERO -->
+        <section class="inventory-hero">
+            <div class="inventory-hero-inner">
+                <div>
+                    <span class="eyebrow">
+                        ✦ MEDICATION MANAGEMENT
+                    </span>
+
+                    <h1>Inventory <span>Control.</span></h1>
+
+                    <p>
+                        Organize medication records, manage stock
+                        quantities, and track expiration dates
+                        through one streamlined interface.
+                    </p>
+                </div>
+
+                <a href="#inventory-form" class="hero-btn primary">
+                    + Add Medication
+                </a>
+            </div>
+        </section>
+
+        <div class="inventory-content container">
+
+            <!-- PAGE INTRO -->
+            <section class="inventory-intro">
+                <div>
+                    <span class="section-kicker">INVENTORY OPERATIONS</span>
+                    <h2>Medication Management</h2>
+                    <p>
+                        Create, view, update, and delete medication
+                        records using the inventory management tools below.
+                    </p>
+                </div>
+
+                <span class="inventory-demo-badge">
+                    ● CLIENT-SIDE DEMO
+                </span>
+            </section>
+
+            <!-- IMPORTANT: RETAINED .crud CLASS -->
+            <section class="crud inventory-workspace">
+
+                <!-- MEDICATION FORM -->
+                <div id="inventory-form" class="inventory-form-panel">
+
+                    <div class="inventory-panel-heading">
+                        <div class="inventory-heading-icon">✚</div>
+                        <div>
+                            <span class="inventory-eyebrow">MEDICATION DETAILS</span>
+                            <h3>Add or Edit Medication</h3>
+                            <p>Enter medication information below.</p>
+                        </div>
+                    </div>
+
+                    <form id="itemForm">
+
+                        <input type="hidden" id="itemId">
+
+                        <label for="name">
+                            Medication Name
+                            <input id="name"
+                                   name="name"
+                                   type="text"
+                                   placeholder="e.g. Amoxicillin"
+                                   required>
+                        </label>
+
+                        <label for="quantity">
+                            Stock Quantity
+                            <input id="quantity"
+                                   name="quantity"
+                                   type="number"
+                                   min="0"
+                                   placeholder="e.g. 150"
+                                   required>
+                        </label>
+
+                        <label for="expiry">
+                            Expiration Date
+                            <input id="expiry"
+                                   name="expiry"
+                                   type="date"
+                                   required>
+                        </label>
+
+                        <label for="supplier">
+                            Supplier
+                            <input id="supplier"
+                                   name="supplier"
+                                   type="text"
+                                   placeholder="e.g. Supplier A"
+                                   required>
+                        </label>
+
+                        <div class="form-actions">
+                            <button type="submit" class="inventory-save-btn">
+                                Save Medication &rarr;
+                            </button>
+
+                            <button type="button"
+                                    id="resetBtn"
+                                    class="inventory-reset-btn">
+                                Reset Form
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- INVENTORY TABLE -->
+                <div class="inventory-table-panel">
+
+                    <div class="inventory-table-heading">
+                        <div>
+                            <span class="inventory-eyebrow">MEDICATION RECORDS</span>
+                            <h3>Inventory List</h3>
+                            <p>View and manage your existing medication entries.</p>
+                        </div>
+
+                        <span class="inventory-table-label">
+                            INVENTORY RECORDS
+                        </span>
+                    </div>
+
+                    <div class="inventory-table-scroll">
+                        <table id="itemsTable">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Medication</th>
+                                    <th>Quantity</th>
+                                    <th>Expiration</th>
+                                    <th>Supplier</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- INFORMATION PANEL -->
+            <section class="inventory-info-panel">
+                <div class="inventory-info-icon">✧</div>
+
+                <div>
+                    <h3>Simple inventory management, all in one place.</h3>
+                    <p>
+                        This page demonstrates Create, Read, Update,
+                        and Delete operations using client-side JavaScript.
+                        It is a prototype and is not connected to a
+                        production pharmacy database.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 PharmaFlow — Pharmacy Inventory Management Demo</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

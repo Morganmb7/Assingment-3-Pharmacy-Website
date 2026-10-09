@@ -1,0 +1,224 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard | PharmaFlow</title>
+    <link rel="stylesheet" href="css/site.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="dashboard-page">
+
+    <header>
+        <nav class="site-nav">
+            <a class="brand" href="index.html">PharmaFlow</a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a class="active" href="dashboard.html">Dashboard</a>
+                <a href="crud.html">Inventory</a>
+                <a href="bot.html">AI Assistant</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- DASHBOARD HERO -->
+        <section class="dashboard-hero">
+            <div class="dashboard-hero-inner">
+
+                <div>
+                    <span class="eyebrow">
+                        ✦ PHARMACY ANALYTICS
+                    </span>
+
+                    <h1>
+                        Inventory <span>Intelligence.</span>
+                    </h1>
+
+                    <p>
+                        Explore medication stock distribution,
+                        expiration trends, and supplier insights
+                        through interactive data visualizations.
+                    </p>
+                </div>
+
+                <a href="crud.html" class="hero-btn primary">
+                    Manage Inventory &rarr;
+                </a>
+
+            </div>
+        </section>
+
+        <!-- DASHBOARD CONTENT -->
+        <div class="dashboard-content container">
+
+            <!-- OVERVIEW -->
+            <section class="dashboard-overview">
+
+                <div class="dashboard-section-heading">
+                    <div>
+                        <span class="section-kicker">ANALYTICS OVERVIEW</span>
+                        <h2>Your inventory at a glance.</h2>
+                        <p>
+                            Explore three interactive views of
+                            sample pharmacy inventory data.
+                        </p>
+                    </div>
+
+                    <span class="dashboard-demo-badge">
+                        ● DEMONSTRATION DATA
+                    </span>
+                </div>
+
+                <div class="dashboard-summary-grid">
+
+                    <div class="dashboard-summary-card">
+                        <div class="summary-icon teal">▦</div>
+                        <div>
+                            <span class="summary-label">Stock Distribution</span>
+                            <h3>By Category</h3>
+                            <p>Medication inventory breakdown</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-summary-card">
+                        <div class="summary-icon orange">◷</div>
+                        <div>
+                            <span class="summary-label">Expiration Monitoring</span>
+                            <h3>Risk Trends</h3>
+                            <p>Explore expiration patterns</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-summary-card">
+                        <div class="summary-icon purple">◎</div>
+                        <div>
+                            <span class="summary-label">Supplier Analysis</span>
+                            <h3>Supplier Share</h3>
+                            <p>Review supplier distribution</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- INTERACTIVE CHARTS -->
+            <section class="dashboard-analytics">
+
+                <div class="dashboard-section-heading">
+                    <div>
+                        <span class="section-kicker">DATA VISUALIZATION</span>
+                        <h2>Explore your analytics.</h2>
+                        <p>
+                            Interactive charts powered by Chart.js.
+                            Hover over the charts to explore the data.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dashboard-chart-grid">
+
+                    <!-- CHART 1 -->
+                    <article class="dashboard-chart-panel">
+                        <div class="dashboard-chart-header">
+                            <div>
+                                <span class="chart-category">INVENTORY</span>
+                                <h3>Stock by Category</h3>
+                                <p>Distribution across medication categories</p>
+                            </div>
+                            <span class="chart-symbol">▦</span>
+                        </div>
+
+                        <div class="dashboard-canvas-wrap">
+                            <canvas id="chartStockByCategory"></canvas>
+                        </div>
+
+                        <div class="dashboard-chart-footer">
+                            <span class="chart-live-dot"></span>
+                            Interactive visualization
+                        </div>
+                    </article>
+
+                    <!-- CHART 2 -->
+                    <article class="dashboard-chart-panel">
+                        <div class="dashboard-chart-header">
+                            <div>
+                                <span class="chart-category">EXPIRATION</span>
+                                <h3>Expiry Risk Trend</h3>
+                                <p>Understand potential expiration patterns</p>
+                            </div>
+                            <span class="chart-symbol">◷</span>
+                        </div>
+
+                        <div class="dashboard-canvas-wrap">
+                            <canvas id="chartExpiryTrend"></canvas>
+                        </div>
+
+                        <div class="dashboard-chart-footer">
+                            <span class="chart-live-dot"></span>
+                            Interactive visualization
+                        </div>
+                    </article>
+
+                    <!-- CHART 3 -->
+                    <article class="dashboard-chart-panel">
+                        <div class="dashboard-chart-header">
+                            <div>
+                                <span class="chart-category">SUPPLIERS</span>
+                                <h3>Supplier Distribution</h3>
+                                <p>Compare supplier share across inventory</p>
+                            </div>
+                            <span class="chart-symbol">◎</span>
+                        </div>
+
+                        <div class="dashboard-canvas-wrap">
+                            <canvas id="chartSupplierShare"></canvas>
+                        </div>
+
+                        <div class="dashboard-chart-footer">
+                            <span class="chart-live-dot"></span>
+                            Interactive visualization
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- INFORMATION SECTION -->
+            <section class="dashboard-info-panel">
+
+                <div class="dashboard-info-icon">✧</div>
+
+                <div class="dashboard-info-text">
+                    <h3>Turn inventory data into better decisions.</h3>
+                    <p>
+                        This demonstration dashboard highlights
+                        how stock analytics, expiration monitoring,
+                        and supplier analysis can support pharmacy
+                        inventory management. Charts currently
+                        use the sample data configured in the project.
+                    </p>
+                </div>
+
+                <a href="crud.html" class="dashboard-info-link">
+                    Explore Inventory &rarr;
+                </a>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 PharmaFlow — Pharmacy Inventory Management Demo</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

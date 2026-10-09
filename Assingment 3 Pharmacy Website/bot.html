@@ -1,0 +1,209 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Assistant | PharmaFlow</title>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body class="bot-page">
+
+    <header>
+        <nav class="site-nav">
+            <a class="brand" href="index.html">PharmaFlow</a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="crud.html">Inventory</a>
+                <a class="active" href="bot.html">AI Assistant</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="bot-hero">
+            <div class="bot-hero-inner">
+                <span class="eyebrow">✦ PHARMAFLOW AI</span>
+
+                <h1>
+                    Your inventory.<br>
+                    <span>One conversation away.</span>
+                </h1>
+
+                <p>
+                    Explore how an intelligent assistant could help
+                    pharmacy teams find inventory information,
+                    identify stock concerns, and answer
+                    operational questions.
+                </p>
+
+                <span class="bot-demo-label">
+                    AI CHATBOT PROTOTYPE
+                </span>
+            </div>
+        </section>
+
+        <!-- CHAT WORKSPACE -->
+        <section class="bot-workspace container">
+
+            <div class="bot-workspace-heading">
+                <div>
+                    <span class="section-kicker">AI-POWERED ASSISTANCE</span>
+                    <h2>Meet your inventory assistant.</h2>
+                    <p>
+                        A conversational interface designed
+                        for pharmacy inventory questions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bot-layout">
+
+                <!-- SUGGESTED QUESTIONS -->
+                <aside class="bot-sidebar">
+                    <div class="bot-sidebar-header">
+                        <div class="bot-sidebar-icon">✧</div>
+                        <h3>Quick Questions</h3>
+                        <p>Examples of what an integrated assistant could answer.</p>
+                    </div>
+
+                    <div class="bot-suggestions">
+                        <div class="bot-suggestion">
+                            <span>▦</span>
+                            <p>What medications are low in stock?</p>
+                        </div>
+
+                        <div class="bot-suggestion">
+                            <span>◷</span>
+                            <p>Which items expire in the next 30 days?</p>
+                        </div>
+
+                        <div class="bot-suggestion">
+                            <span>◎</span>
+                            <p>Show recent stock movements for supplier X.</p>
+                        </div>
+                    </div>
+
+                    <div class="bot-sidebar-note">
+                        <strong>Demo Environment</strong>
+                        <p>
+                            These are example prompts. Live inventory
+                            responses require a connected chatbot
+                            and data source.
+                        </p>
+                    </div>
+                </aside>
+
+                <!-- CHAT WINDOW -->
+                <div class="bot-chat-panel">
+
+                    <div class="bot-chat-header">
+                        <div class="bot-chat-avatar">✚</div>
+
+                        <div class="bot-chat-identity">
+                            <h3>PharmaFlow Assistant</h3>
+                            <span>Integration pending</span>
+                        </div>
+
+                        <span class="bot-chat-status">DEMO</span>
+                    </div>
+
+                    <div id="bot-placeholder" class="bot-chat-messages">
+
+                        <div class="bot-message bot-assistant-message">
+                            <div class="bot-message-avatar">✧</div>
+
+                            <div class="bot-message-bubble">
+                                <strong>PharmaFlow Assistant</strong>
+                                <p>
+                                    Hello! Welcome to PharmaFlow.
+                                    I'm your future pharmacy inventory
+                                    assistant.
+                                </p>
+                                <p>
+                                    Once connected to an AI service and
+                                    inventory data, this space can help
+                                    answer stock, expiration, and
+                                    supplier-related questions.
+                                </p>
+                                <small>Example welcome message</small>
+                            </div>
+                        </div>
+
+                        <div class="bot-message bot-user-message">
+                            <div class="bot-message-bubble">
+                                <p>What medications are low in stock?</p>
+                                <small>Example user question</small>
+                            </div>
+                        </div>
+
+                        <div class="bot-message bot-assistant-message">
+                            <div class="bot-message-avatar">✧</div>
+
+                            <div class="bot-message-bubble">
+                                <strong>PharmaFlow Assistant</strong>
+                                <p>
+                                    To answer that question, I'll need
+                                    access to your inventory records.
+                                    Connect a chatbot and data source
+                                    to enable inventory analysis.
+                                </p>
+                                <small>Example response</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="bot-chat-input-area">
+                        <div class="bot-chat-input-row">
+                            <input type="text"
+                                   placeholder="Connect a chatbot to start asking questions..."
+                                   aria-label="Chat input unavailable"
+                                   disabled>
+
+                            <button type="button" disabled>
+                                Send &rarr;
+                            </button>
+                        </div>
+
+                        <p>
+                            Chat is currently a visual prototype.
+                            BotPress integration is not configured.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- INTEGRATION INFO -->
+            <div class="bot-integration-panel">
+                <div class="bot-integration-icon">⚙</div>
+
+                <div>
+                    <h3>Ready for AI integration.</h3>
+                    <p>
+                        This page is prepared for a future BotPress
+                        or other chatbot integration. Once your
+                        chatbot is configured, its embed code can
+                        replace the demonstration chat messages.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 PharmaFlow — Pharmacy Inventory Management Demo</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
