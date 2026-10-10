@@ -220,5 +220,55 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Sample Chart.js initialization for the three dashboard canvases
+        document.addEventListener('DOMContentLoaded', function () {
+            // Stock by Category - Pie
+            const stockCtx = document.getElementById('chartStockByCategory').getContext('2d');
+            new Chart(stockCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['OTC', 'Prescription', 'Supplements', 'Vaccines'],
+                    datasets: [{
+                        data: [45, 30, 15, 10],
+                        backgroundColor: ['#4DB6AC', '#FFB74D', '#9575CD', '#F06292']
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+
+            // Expiry Risk Trend - Line
+            const expiryCtx = document.getElementById('chartExpiryTrend').getContext('2d');
+            new Chart(expiryCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Expiry Risk',
+                        data: [5, 8, 6, 12, 9, 7],
+                        borderColor: '#FF7043',
+                        backgroundColor: 'rgba(255,112,67,0.12)',
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+
+            // Supplier Distribution - Doughnut
+            const supplierCtx = document.getElementById('chartSupplierShare').getContext('2d');
+            new Chart(supplierCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Supplier A', 'Supplier B', 'Supplier C'],
+                    datasets: [{
+                        data: [55, 30, 15],
+                        backgroundColor: ['#64B5F6', '#AED581', '#FFCC80']
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+        });
+    </script>
 </body>
 </html>
