@@ -11,10 +11,11 @@
 <body class="home-page">
 
     <header>
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Main navigation">
             <a class="brand" href="index.html">PharmaFlow</a>
+
             <div class="nav-links">
-                <a class="active" href="index.html">Home</a>
+                <a class="active" href="index.html" aria-current="page">Home</a>
                 <a href="aboutus.html">About Us</a>
                 <a href="dashboard.html">Dashboard</a>
                 <a href="crud.html">Inventory</a>
@@ -40,25 +41,28 @@
                     </h1>
 
                     <p>
-                        Take control of your pharmacy operations
-                        with one streamlined platform. Monitor
-                        inventory, identify stock risks, explore
-                        insights, and manage medications with ease.
+                        Inventory decisions should not require hours of
+                        searching spreadsheets and checking disconnected
+                        records. PharmaFlow brings pharmacy inventory
+                        management and visual insights into one platform,
+                        helping teams spot stock risks, investigate
+                        discrepancies, and make informed decisions.
                     </p>
 
                     <div class="hero-buttons">
                         <a href="dashboard.html" class="hero-btn primary">
                             Explore Dashboard &rarr;
                         </a>
+
                         <a href="crud.html" class="hero-btn secondary">
                             Manage Inventory
                         </a>
                     </div>
 
                     <div class="hero-highlights">
-                        <span>✓ Inventory tracking</span>
-                        <span>✓ Data visualization</span>
-                        <span>✓ AI integration ready</span>
+                        <span>✓ Centralized records</span>
+                        <span>✓ Clear inventory insights</span>
+                        <span>✓ Earlier risk identification</span>
                     </div>
                 </div>
 
@@ -69,6 +73,7 @@
                             <span class="preview-label">OVERVIEW</span>
                             <h3>Inventory Snapshot</h3>
                         </div>
+
                         <span class="demo-tag">DEMO DATA</span>
                     </div>
 
@@ -98,7 +103,7 @@
                             <span>Illustrative trend</span>
                         </div>
 
-                        <div class="bar-chart" aria-label="Decorative sample bar chart">
+                        <div class="bar-chart" aria-hidden="true">
                             <div style="height:44%"></div>
                             <div style="height:66%"></div>
                             <div style="height:53%"></div>
@@ -108,9 +113,13 @@
                             <div style="height:76%"></div>
                         </div>
 
-                        <div class="chart-days">
-                            <span>M</span><span>T</span><span>W</span>
-                            <span>T</span><span>F</span><span>S</span>
+                        <div class="chart-days" aria-hidden="true">
+                            <span>M</span>
+                            <span>T</span>
+                            <span>W</span>
+                            <span>T</span>
+                            <span>F</span>
+                            <span>S</span>
                             <span>S</span>
                         </div>
                     </div>
@@ -124,48 +133,237 @@
             </div>
         </section>
 
-        <!-- FEATURES -->
+        <!-- BUSINESS PROBLEM -->
         <section class="home-features container">
 
             <div class="section-intro">
-                <span class="section-kicker">ONE CONNECTED PLATFORM</span>
-                <h2>Everything your pharmacy needs.</h2>
+                <span class="section-kicker">THE BUSINESS PROBLEM</span>
+
+                <h2>Scattered records. Manual checks. Missed warning signs.</h2>
+
                 <p>
-                    Simple tools to make inventory management
-                    more organized, informed, and efficient.
+                    Small pharmacies in the United States can struggle
+                    with fragmented inventory and operational data.
+                    Stock counts, supplier deliveries, expiration dates,
+                    and adjustments may be recorded in separate places,
+                    making it difficult to see what is happening across
+                    the pharmacy.
+                </p>
+
+                <p>
+                    Staff must compare records and verify quantities
+                    manually before deciding what needs attention.
+                    Without a reliable, current view of inventory,
+                    problems can be discovered only after they affect
+                    daily operations.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+
+                <article class="feature-tile">
+                    <div class="feature-icon teal" aria-hidden="true">▤</div>
+
+                    <h3>Stock Discrepancies</h3>
+
+                    <p>
+                        Recorded quantities may not match what is
+                        physically on the shelf. Finding the cause
+                        requires checking deliveries, adjustments,
+                        and stock movements across multiple records.
+                        Unresolved differences make purchasing
+                        decisions less reliable.
+                    </p>
+                </article>
+
+                <article class="feature-tile">
+                    <div class="feature-icon blue" aria-hidden="true">◷</div>
+
+                    <h3>Expiration and Overstock Risks</h3>
+
+                    <p>
+                        Manual expiration checks make it harder to
+                        consistently identify products approaching
+                        their expiration dates. Excess stock can
+                        tie up money and shelf space, while unused
+                        medications may become avoidable waste.
+                    </p>
+                </article>
+
+                <article class="feature-tile">
+                    <div class="feature-icon purple" aria-hidden="true">⇄</div>
+
+                    <h3>Supply and Availability Gaps</h3>
+
+                    <p>
+                        Low stock and delayed deliveries can be
+                        difficult to anticipate when supply activity
+                        is tracked separately. Teams may need to
+                        place urgent orders or spend additional time
+                        resolving medication availability issues.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PROPOSED SOLUTION -->
+        <section class="home-features container">
+
+            <div class="section-intro">
+                <span class="section-kicker">THE PHARMAFLOW SOLUTION</span>
+
+                <h2>One connected view for better inventory decisions.</h2>
+
+                <p>
+                    PharmaFlow's proposed solution transforms manual
+                    tracking into a database-backed web application.
+                    Centralized records and an interactive dashboard
+                    would give pharmacy managers and inventory staff
+                    a shared place to monitor activity, investigate
+                    problems, and prioritize action.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+
+                <article class="feature-tile">
+                    <div class="feature-icon teal" aria-hidden="true">◫</div>
+
+                    <h3>Monitor Key Indicators</h3>
+
+                    <p>
+                        Use dashboard KPIs, charts, and alerts to
+                        review stock levels, low-stock products,
+                        inventory value, and expiration risks.
+                        A consolidated overview helps staff identify
+                        which items require a closer look.
+                    </p>
+                </article>
+
+                <article class="feature-tile">
+                    <div class="feature-icon blue" aria-hidden="true">✓</div>
+
+                    <h3>Explain Inventory Variances</h3>
+
+                    <p>
+                        Compare physical counts with recorded
+                        quantities and review the related stock
+                        movements. Tracking receipts and adjustments
+                        together would help teams investigate
+                        discrepancies and keep records accurate.
+                    </p>
+                </article>
+
+                <article class="feature-tile">
+                    <div class="feature-icon purple" aria-hidden="true">↗</div>
+
+                    <h3>Plan Purchases with Evidence</h3>
+
+                    <p>
+                        Review inventory trends alongside supplier
+                        delivery performance to support reorder
+                        decisions. Identify recurring delays,
+                        prioritize products at risk of running out,
+                        and avoid buying excess stock.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- BUSINESS VALUE -->
+        <section class="home-features container">
+
+            <div class="section-intro">
+                <span class="section-kicker">FROM INSIGHT TO ACTION</span>
+
+                <h2>Help pharmacy teams act before problems grow.</h2>
+
+                <p>
+                    A low-stock indicator can prompt a reorder review.
+                    An expiry alert can bring attention to products
+                    that need action. An inventory variance can trigger
+                    a physical count and a review of recent movements.
+                    Supplier trends can help managers address
+                    recurring delivery issues.
+                </p>
+
+                <p>
+                    The goal is to reduce time spent reconciling
+                    records, improve inventory accuracy, limit
+                    expiration-related waste, and support medication
+                    availability. Pharmacy staff verify the findings
+                    and approve the appropriate actions.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- EXPLORE THE DEMO -->
+        <section class="home-features container">
+
+            <div class="section-intro">
+                <span class="section-kicker">EXPLORE PHARMAFLOW</span>
+
+                <h2>See the platform in action.</h2>
+
+                <p>
+                    Explore the demonstration pages to see how
+                    inventory management and visual insights can
+                    work together.
                 </p>
             </div>
 
             <div class="feature-grid">
 
                 <a href="dashboard.html" class="feature-tile">
-                    <div class="feature-icon teal">◫</div>
+                    <div class="feature-icon teal" aria-hidden="true">◫</div>
+
                     <h3>Inventory Analytics</h3>
+
                     <p>
-                        Visualize stock levels, expiration risks,
-                        and inventory trends through interactive charts.
+                        Explore the dashboard for a visual overview
+                        of sample inventory data and the indicators
+                        that support daily decisions.
                     </p>
-                    <span class="feature-link">View Dashboard &rarr;</span>
+
+                    <span class="feature-link">
+                        View Dashboard &rarr;
+                    </span>
                 </a>
 
                 <a href="crud.html" class="feature-tile">
-                    <div class="feature-icon blue">▤</div>
+                    <div class="feature-icon blue" aria-hidden="true">▤</div>
+
                     <h3>Inventory Management</h3>
+
                     <p>
-                        Add, view, update, and remove medication
-                        records using a simple management interface.
+                        Explore the interface for adding, viewing,
+                        updating, and removing medication records
+                        in one organized location.
                     </p>
-                    <span class="feature-link">Manage Products &rarr;</span>
+
+                    <span class="feature-link">
+                        Manage Products &rarr;
+                    </span>
                 </a>
 
                 <a href="bot.html" class="feature-tile">
-                    <div class="feature-icon purple">✧</div>
+                    <div class="feature-icon purple" aria-hidden="true">✧</div>
+
                     <h3>AI Assistant</h3>
+
                     <p>
-                        Explore the chatbot integration area
-                        designed for future pharmacy assistance.
+                        Visit the assistant integration area,
+                        designed for future support with navigating
+                        inventory information and answering
+                        operational questions.
                     </p>
-                    <span class="feature-link">Explore Assistant &rarr;</span>
+
+                    <span class="feature-link">
+                        Explore Assistant &rarr;
+                    </span>
                 </a>
 
             </div>
@@ -175,14 +373,33 @@
         <section class="home-cta">
             <div>
                 <span class="section-kicker">GET STARTED</span>
+
                 <h2>Make every inventory decision count.</h2>
+
                 <p>
-                    Explore the pharmacy inventory management demo.
+                    Discover a clearer approach to pharmacy
+                    inventory management.
                 </p>
             </div>
+
             <a href="dashboard.html" class="hero-btn primary">
                 Open Dashboard &rarr;
             </a>
+        </section>
+
+        <!-- DEMO SCOPE -->
+        <section class="container">
+            <p>
+                <small>
+                    <strong>About this demo:</strong>
+                    PharmaFlow uses sample data. Database integration,
+                    automated alerts, inventory movement tracking,
+                    and supplier performance analysis describe the
+                    proposed solution and may not all be implemented
+                    in this prototype. Live visibility depends on
+                    connected data sources and their update frequency.
+                </small>
+            </p>
         </section>
 
     </main>
@@ -192,5 +409,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+
 </body>
 </html>
