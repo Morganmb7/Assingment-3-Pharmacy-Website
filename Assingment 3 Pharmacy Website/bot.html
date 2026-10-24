@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -37,14 +36,13 @@
                 </h1>
 
                 <p>
-                    Explore how an intelligent assistant could help
-                    pharmacy teams find inventory information,
-                    identify stock concerns, and answer
-                    operational questions.
+                    Ask the PharmaFlow Assistant about stock levels, expiry dates,
+                    reorders, suppliers and prices. It answers from our pharmacy
+                    inventory data, built with Botpress.
                 </p>
 
                 <span class="bot-demo-label">
-                    AI CHATBOT PROTOTYPE
+                    LIVE AI CHATBOT
                 </span>
             </div>
         </section>
@@ -57,8 +55,8 @@
                     <span class="section-kicker">AI-POWERED ASSISTANCE</span>
                     <h2>Meet your inventory assistant.</h2>
                     <p>
-                        A conversational interface designed
-                        for pharmacy inventory questions.
+                        Click a question below, or open the chat and type your own.
+                        The chat window opens in the bottom-right corner of the page.
                     </p>
                 </div>
             </div>
@@ -70,37 +68,52 @@
                     <div class="bot-sidebar-header">
                         <div class="bot-sidebar-icon">✧</div>
                         <h3>Quick Questions</h3>
-                        <p>Examples of what an integrated assistant could answer.</p>
+                        <p>Click any question to ask the assistant.</p>
                     </div>
 
                     <div class="bot-suggestions">
-                        <div class="bot-suggestion">
-                            <span>▦</span>
-                            <p>What medications are low in stock?</p>
-                        </div>
-
-                        <div class="bot-suggestion">
+                        <div class="bot-suggestion" role="button" tabindex="0">
                             <span>◷</span>
-                            <p>Which items expire in the next 30 days?</p>
+                            <p>Which items expire within 3 months?</p>
                         </div>
 
-                        <div class="bot-suggestion">
+                        <div class="bot-suggestion" role="button" tabindex="0">
+                            <span>⚠</span>
+                            <p>Which medications have already expired?</p>
+                        </div>
+
+                        <div class="bot-suggestion" role="button" tabindex="0">
+                            <span>▦</span>
+                            <p>What do we need to reorder?</p>
+                        </div>
+
+                        <div class="bot-suggestion" role="button" tabindex="0">
+                            <span>$</span>
+                            <p>What is the price of Insulin Glargine?</p>
+                        </div>
+
+                        <div class="bot-suggestion" role="button" tabindex="0">
                             <span>◎</span>
-                            <p>Show recent stock movements for supplier X.</p>
+                            <p>Which medications does Gulf Coast Pharma Supply provide?</p>
+                        </div>
+
+                        <div class="bot-suggestion" role="button" tabindex="0">
+                            <span>♥</span>
+                            <p>List all cardiovascular medications.</p>
                         </div>
                     </div>
 
                     <div class="bot-sidebar-note">
-                        <strong>Demo Environment</strong>
+                        <strong>More to try</strong>
                         <p>
-                            These are example prompts. Live inventory
-                            responses require a connected chatbot
-                            and data source.
+                            "How many Albuterol inhalers do we have?" &middot;
+                            "What is the batch number for Amoxicillin?" &middot;
+                            "Who supplies Omeprazole?"
                         </p>
                     </div>
                 </aside>
 
-                <!-- CHAT WINDOW -->
+                <!-- CHAT PANEL -->
                 <div class="bot-chat-panel">
 
                     <div class="bot-chat-header">
@@ -108,13 +121,13 @@
 
                         <div class="bot-chat-identity">
                             <h3>PharmaFlow Assistant</h3>
-                            <span>Integration pending</span>
+                            <span>Powered by Botpress</span>
                         </div>
 
-                        <span class="bot-chat-status">DEMO</span>
+                        <span class="bot-chat-status">LIVE</span>
                     </div>
 
-                    <div id="bot-placeholder" class="bot-chat-messages">
+                    <div class="bot-chat-messages">
 
                         <div class="bot-message bot-assistant-message">
                             <div class="bot-message-avatar">✧</div>
@@ -122,24 +135,14 @@
                             <div class="bot-message-bubble">
                                 <strong>PharmaFlow Assistant</strong>
                                 <p>
-                                    Hello! Welcome to PharmaFlow.
-                                    I'm your future pharmacy inventory
-                                    assistant.
+                                    Hi! I'm the PharmaFlow inventory assistant. I can tell you
+                                    what's on the shelf, what's expiring soon, what needs
+                                    reordering, and who supplies each medication.
                                 </p>
                                 <p>
-                                    Once connected to an AI service and
-                                    inventory data, this space can help
-                                    answer stock, expiration, and
-                                    supplier-related questions.
+                                    Type a question below or click one on the left. I'll answer
+                                    in the chat window at the bottom-right of the page.
                                 </p>
-                                <small>Example welcome message</small>
-                            </div>
-                        </div>
-
-                        <div class="bot-message bot-user-message">
-                            <div class="bot-message-bubble">
-                                <p>What medications are low in stock?</p>
-                                <small>Example user question</small>
                             </div>
                         </div>
 
@@ -147,51 +150,55 @@
                             <div class="bot-message-avatar">✧</div>
 
                             <div class="bot-message-bubble">
-                                <strong>PharmaFlow Assistant</strong>
+                                <strong>Good to know</strong>
                                 <p>
-                                    To answer that question, I'll need
-                                    access to your inventory records.
-                                    Connect a chatbot and data source
-                                    to enable inventory analysis.
+                                    I answer inventory questions only. For medical or dosing
+                                    advice, please speak with a licensed pharmacist.
                                 </p>
-                                <small>Example response</small>
                             </div>
                         </div>
 
                     </div>
 
                     <div class="bot-chat-input-area">
-                        <div class="bot-chat-input-row">
-                            <input type="text"
-                                   placeholder="Connect a chatbot to start asking questions..."
-                                   aria-label="Chat input unavailable"
-                                   disabled>
+                        <form id="bot-ask-form" class="bot-chat-input-row">
+                            <input id="bot-ask-input"
+                                   type="text"
+                                   placeholder="Ask about stock, expiry, reorders..."
+                                   aria-label="Ask the PharmaFlow Assistant">
 
-                            <button type="button" disabled>
-                                Send &rarr;
+                            <button type="submit">
+                                Ask &rarr;
                             </button>
-                        </div>
+                        </form>
 
                         <p>
-                            Chat is currently a visual prototype.
-                            BotPress integration is not configured.
+                            Or click the chat bubble in the bottom-right corner at any time.
                         </p>
                     </div>
 
                 </div>
             </div>
 
-            <!-- INTEGRATION INFO -->
+            <!-- DATASET INFO -->
             <div class="bot-integration-panel">
                 <div class="bot-integration-icon">⚙</div>
 
                 <div>
-                    <h3>Ready for AI integration.</h3>
+                    <h3>About the data.</h3>
                     <p>
-                        This page is prepared for a future BotPress
-                        or other chatbot integration. Once your
-                        chatbot is configured, its embed code can
-                        replace the demonstration chat messages.
+                        The assistant searches a Botpress knowledge base built from a table of
+                        <strong>15 medications</strong> from a sample US retail pharmacy, the same
+                        records used on our Inventory and Dashboard pages. For each medication it
+                        knows the <strong>name and strength, batch number, expiry date, quantity on
+                        shelf, supplier, wholesale cost, retail price</strong> (30&ndash;33% markup),
+                        <strong>therapeutic category</strong> and <strong>stock status</strong>.
+                    </p>
+                    <p>
+                        Statuses follow our pharmacy SOPs and reflect the stock count of
+                        October 23, 2026: <em>near expiry</em> means expiring within 3 months,
+                        and <em>reorder</em> means fewer than 2 units on the shelf.
+                        All data is synthetic and was created for this prototype.
                     </p>
                 </div>
             </div>
@@ -205,5 +212,10 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/bot.js"></script>
+
+    <!-- BOTPRESS WEBCHAT EMBED (PharmaFlow Assistant) -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.7/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/10/24/19/20261024194249-XBQ8TV3E.js" defer></script>
 </body>
 </html>
