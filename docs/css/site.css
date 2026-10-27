@@ -35,7 +35,8 @@ body {
     justify-content: space-between;
     gap: 20px;
     background: var(--white);
-    padding: 18px 5%;
+    /* padding: 18px 5%; */
+    padding: 1.5%;
     border-bottom: 1px solid var(--border);
     box-shadow: 0 2px 14px rgba(20,43,73,.04);
     position: sticky;
@@ -64,22 +65,40 @@ body {
     gap: 8px;
 }
 
-    .nav-links a {
-        margin: 0;
-        padding: 9px 14px;
-        text-decoration: none;
-        color: var(--muted);
-        font-size: .92rem;
-        font-weight: 600;
-        border-radius: 9px;
-        transition: .2s ease;
-    }
+.nav-links a {
+    margin: 0;
+    padding: 9px 14px;
+    text-decoration: none;
+    color: var(--muted);
+    font-size: .92rem;
+    font-weight: 600;
+    border-radius: 9px;
+    transition: .2s ease;
+}
 
-        .nav-links a:hover,
-        .nav-links a:focus-visible {
-            background: #e8f6f6;
-            color: var(--accent);
-        }
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    background: #e8f6f6;
+    color: var(--accent);
+}
+
+.toggle-button {
+    position: absolute;
+    top: 0.9rem;
+    right: 1.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.toggle-button .bar {
+    background: black;
+    border-radius: 10px;
+    height: 3.5px;
+    width: 100%;
+}
 
 /* PAGE LAYOUT */
 
@@ -395,7 +414,7 @@ td button {
     .site-nav {
         flex-direction: column;
         align-items: flex-start;
-        padding: 16px 20px;
+        /* padding: 16px 20px; */
     }
 
     .nav-links {
@@ -442,7 +461,8 @@ td button {
 }
 
     .home-page .site-nav {
-        padding: 18px 6%;
+        /* padding: 18px 6%; */
+        padding: 1.25%;
     }
 
         .home-page .site-nav .brand {
@@ -875,6 +895,15 @@ td button {
     }
 }
 
+@media(max-width: 780px) {
+
+    .site-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
 @media (max-width: 600px) {
     .home-hero h1 {
         font-size: 2.6rem;
@@ -910,7 +939,29 @@ td button {
         padding: 30px;
         flex-direction: column;
         align-items: flex-start;
+    }   
+
+    .toggle-button {
+        display: flex;
     }
+
+    .nav-links {
+        flex-direction: column;  
+        border: 1px solid rgba(0,0,0,0.125);
+        width: 100%;
+        display: none;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        border-radius: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
 }
 
 /* ===== PHARMAFLOW ABOUT US PAGE ===== */
@@ -1182,6 +1233,7 @@ td button {
     .about-hero h1 {
         font-size: 2.5rem;
     }
+
 }
 
 /* ===== PHARMAFLOW DASHBOARD ===== */
