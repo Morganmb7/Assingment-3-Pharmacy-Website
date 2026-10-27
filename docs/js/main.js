@@ -437,7 +437,35 @@
             });
         }
     }
+    /* ===== NAVIGATION: HIGHLIGHT CURRENT PAGE ===== */
 
+    function highlightActiveNav() {
+        let current = decodeURIComponent(
+            window.location.pathname.split("/").pop()
+        ).toLowerCase();
+
+        if (current === "") current = "index.html";
+
+        document.querySelectorAll(".nav-links a[href]").forEach(link => {
+            const target = (
+                link.getAttribute("href")
+                    .split(/[?#]/)[0]
+                    .split("/")
+                    .pop()
+                    .toLowerCase()
+            ) || "index.html";
+
+            const isCurrent = target === current;
+
+            link.classList.toggle("active", isCurrent);
+
+            if (isCurrent) {
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.removeAttribute("aria-current");
+            }
+        });
+    }
     /* ===== INITIALIZATION ===== */
 
     document.addEventListener("DOMContentLoaded", () => {
