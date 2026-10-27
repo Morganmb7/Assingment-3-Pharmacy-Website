@@ -11,14 +11,20 @@
 <body class="inventory-page">
 
     <header>
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Main navigation">
             <a class="brand" href="index.html">PharmaFlow</a>
 
+            <a class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+
             <div class="nav-links">
-                <a href="index.html">Home</a>
+                <a href="index.html" aria-current="page">Home</a>
                 <a href="aboutus.html">About Us</a>
                 <a href="dashboard.html">Dashboard</a>
-                <a class="active" href="crud.html">Inventory</a>
+                <a href="crud.html">Inventory</a>
                 <a href="bot.html">AI Assistant</a>
             </div>
         </nav>
